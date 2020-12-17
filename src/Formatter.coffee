@@ -214,7 +214,7 @@ class Formatter
     $ = @_cheerio.load '<ul>'
     $ul = $('ul')
     for item in itemArray
-      $a = $('<a>').attr('href', item).text item.replace '/index', ''
+      $a = $('<a>').attr('href', item).text item.replace '/README.md', ''
       $li = $('<li>')
       $li.append $a
       $ul.append $li

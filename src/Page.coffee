@@ -23,7 +23,7 @@ class Page
 
 
   getFileNameNew: () ->
-    return 'index.md' if @fileName == 'index.html'
+    return 'README.md' if @fileName == 'index.html'
     @utils.sanitizeFilename(@heading) + '.md'
 
 

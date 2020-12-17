@@ -51,7 +51,7 @@ class App
     for page in pages
       do (page) =>
         if page.fileName == 'index.html'
-          indexHtmlFiles.push @_path.join page.space, 'index' # gitit requires link to pages without .md extension
+          indexHtmlFiles.push @_path.join page.space, 'README.md' # gitit requires link to pages without .md extension
         @convertPage page, dirIn, dirOut, pages
 
     @writeGlobalIndexFile indexHtmlFiles, dirOut if not @utils.isFile dirIn

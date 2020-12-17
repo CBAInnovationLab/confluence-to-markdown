@@ -201,6 +201,8 @@ class Formatter
           @logger.debug 'No href for link with text "#{text}"'
         else if $(el).hasClass 'createlink'
           $(el).replaceWith $(el).text()
+        else if href.startsWith 'attachments'
+          $(el).replaceWith('> &nbsp;' + $(el))
         else if pageLink = @utils.getLinkToNewPageFile href, pages, space
           $(el).attr 'href', pageLink
       .end()
